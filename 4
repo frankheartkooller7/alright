@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Сортировка массива</h2>
+
+<p>Нажмите на кнопки, чтобы отсортировать объекты автомобилей по возрасту.</p>
+
+<button onclick="myFunction()">Сортировать</button>
+
+<p id="demo"></p>
+
+<script>
+var cars = [
+  {type:"Вольво", year:2016},
+  {type:"Сааб", year:2001},
+  {type:"БМВ", year:2010}
+];
+
+displayCars();
+
+function myFunction() {
+  cars.sort(function(a, b){return a.year - b.year});
+  displayCars();
+}
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  cars[0].type + " " + cars[0].year + "<br>" +
+  cars[1].type + " " + cars[1].year + "<br>" +
+  cars[2].type + " " + cars[2].year;
+}
+</script>
+
+</body>
+</html>
